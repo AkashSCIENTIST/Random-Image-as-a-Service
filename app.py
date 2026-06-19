@@ -18,7 +18,7 @@ def _build_pool() -> None:
     for _ in range(POOL_SIZE):
         img, _ = service.generate(config.DEFAULT_WIDTH, config.DEFAULT_HEIGHT, None, None)
         buf = io.BytesIO()
-        img.save(buf, "PNG", compress_level=1)
+        img.save(buf, "PNG", compress_level=9)  # max compression — done once, served many times
         _pool.append(buf.getvalue())
 
 
@@ -53,7 +53,7 @@ async def image_api(
         raise HTTPException(status_code=400, detail=str(exc))
 
     buf = io.BytesIO()
-    img.save(buf, "PNG", compress_level=1)
+    img.save(buf, "PNG", compress_level=3)
     return Response(
         content=buf.getvalue(),
         media_type="image/png",
