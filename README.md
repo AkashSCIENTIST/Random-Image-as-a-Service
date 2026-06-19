@@ -1,3 +1,15 @@
+---
+title: Random Image as a Service
+emoji: 🎨
+colorFrom: purple
+colorTo: pink
+sdk: gradio
+sdk_version: "5.49.1"
+python_version: "3.12"
+app_file: app.py
+pinned: false
+---
+
 <img src="banner.svg" alt="Random Image as a Service" width="100%">
 
 Point an `<img>` tag at it and get a gradient. Different every time, or pinned with a seed.
