@@ -19,7 +19,7 @@ Nine styles: linear fades, radial blends, multi-stop color fields, freeform blob
 ## HTML
 
 ```html
-<img src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image" alt="">
+<img src="https://aakkaasshh-random-image-as-a-service.hf.space/image" alt="">
 ```
 
 That's the whole thing. Add parameters to control what you get:
@@ -28,20 +28,20 @@ That's the whole thing. Add parameters to control what you get:
 
 ```html
 <!-- pick a size -->
-<img src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?width=1200&height=630">
+<img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=1200&height=630">
 
 <!-- pick a style -->
-<img src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?style=geometric">
+<img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?style=geometric">
 
 <!-- pin it — same seed always returns the same image -->
-<img src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?style=emoji&seed=42">
+<img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?style=emoji&seed=42">
 ```
 
 As a CSS background:
 
 ```css
 .hero {
-  background-image: url("https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?width=1920&height=1080&style=shape_blur");
+  background-image: url("https://aakkaasshh-random-image-as-a-service.hf.space/image?width=1920&height=1080&style=shape_blur");
   background-size: cover;
 }
 ```
@@ -49,13 +49,13 @@ As a CSS background:
 In Markdown:
 
 ```markdown
-![](https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?width=800&height=200&style=gradient_ramp)
+![](https://aakkaasshh-random-image-as-a-service.hf.space/image?width=800&height=200&style=gradient_ramp)
 ```
 
 As an OG image:
 
 ```html
-<meta property="og:image" content="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?width=1200&height=630&seed=7">
+<meta property="og:image" content="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=1200&height=630&seed=7">
 ```
 
 ### Self-waking embed
@@ -63,9 +63,9 @@ As an OG image:
 If the Space might be sleeping, use this instead of a bare `<img>`:
 
 ```html
-<img src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image"
+<img src="https://aakkaasshh-random-image-as-a-service.hf.space/image"
      onerror="var e=this;setTimeout(function(){e.src=e.dataset.src+'?t='+Date.now()},10000)"
-     data-src="https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image"
+     data-src="https://aakkaasshh-random-image-as-a-service.hf.space/image"
      alt="">
 ```
 
@@ -75,7 +75,7 @@ How it works:
 - Keeps retrying every 10 s until the Space is awake and returns a real image
 - Once the Space is up the image loads and `onerror` never fires again
 
-To never hit the sleep state at all, point an uptime monitor (UptimeRobot free tier) at `https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image` every 5 minutes. Any hit counts as activity to HF, so the Space never goes idle.
+To never hit the sleep state at all, point an uptime monitor (UptimeRobot free tier) at `https://aakkaasshh-random-image-as-a-service.hf.space/image` every 5 minutes. Any hit counts as activity to HF, so the Space never goes idle.
 
 ---
 
@@ -107,11 +107,11 @@ The pool builds in the background; during the first ~15 seconds the server falls
 
 ```bash
 # save one
-curl "https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?style=geometric&width=800&height=600" -o banner.png
+curl "https://aakkaasshh-random-image-as-a-service.hf.space/image?style=geometric&width=800&height=600" -o banner.png
 
 # batch — 20 different seeds
 for i in $(seq 1 20); do
-  curl "https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?seed=$i" -o "img_$i.png"
+  curl "https://aakkaasshh-random-image-as-a-service.hf.space/image?seed=$i" -o "img_$i.png"
 done
 ```
 
@@ -121,7 +121,7 @@ done
 import io, urllib.request
 from PIL import Image
 
-with urllib.request.urlopen("https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service/image?style=emoji_hex&seed=9") as r:
+with urllib.request.urlopen("https://aakkaasshh-random-image-as-a-service.hf.space/image?style=emoji_hex&seed=9") as r:
     img = Image.open(io.BytesIO(r.read()))
 
 img.save("out.png")
@@ -177,14 +177,14 @@ print(meta)
 # {'style': 'emoji_hex', 'width': 1024, 'height': 768, 'seed': 42, 'params': {...}}
 ```
 
-**Deploy to Hugging Face Spaces** — create a Space with SDK: Gradio, then:
+**Deploy to Hugging Face Spaces** — create a Space with SDK: Docker, then:
 
 ```bash
 git remote add space https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service
 git push space main
 ```
 
-Spaces detects the FastAPI `app` object in `app.py` and serves it with uvicorn. You get the Gradio UI at `/` and `GET /image` on the same URL — pool-backed, ~1ms after warmup.
+HF builds the Docker image and runs `python app.py`. You get the Gradio UI at `/` and `GET /image` on the same host — pool-backed, ~1ms after warmup.
 
 ---
 
