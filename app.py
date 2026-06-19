@@ -3,22 +3,18 @@ import random
 import threading
 
 import gradio as gr
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import HTTPException, Query
 from fastapi.responses import Response
 from PIL import Image
 
 from core import config, service
 
 # ── Pre-generated image pool ──────────────────────────────────────────────────
-# Images are rendered once at startup and kept as PNG bytes in memory.
-# GET /image with no params picks one at random: memory lookup + HTTP write ≈ 1ms.
 POOL_SIZE = 50
 _pool: list[bytes] = []
 
 
 def _build_pool() -> None:
-    # Append one-by-one so the pool is usable after the very first image (~200ms),
-    # not only after all 50 are done. Critical for cold-start / post-sleep behaviour.
     for _ in range(POOL_SIZE):
         img, _ = service.generate(config.DEFAULT_WIDTH, config.DEFAULT_HEIGHT, None, None)
         buf = io.BytesIO()
@@ -27,46 +23,6 @@ def _build_pool() -> None:
 
 
 threading.Thread(target=_build_pool, daemon=True).start()
-
-
-# ── FastAPI app ───────────────────────────────────────────────────────────────
-app = FastAPI(title="RIaaS — Random Image as a Service")
-
-
-@app.get("/image")
-async def image_api(
-    width:  int | None = Query(None, ge=config.MIN_WIDTH,  le=config.MAX_WIDTH),
-    height: int | None = Query(None, ge=config.MIN_HEIGHT, le=config.MAX_HEIGHT),
-    style:  str | None = Query(None),
-    seed:   int | None = Query(None),
-):
-    # Default request (no params) → serve from pool; ~1ms once pool is warm.
-    # While pool is still building the first time, fall through to live generation.
-    if _pool and width is None and height is None and style is None and seed is None:
-        return Response(
-            content=random.choice(_pool),
-            media_type="image/png",
-            headers={"X-RIaaS-Source": "pool"},
-        )
-
-    # Custom params → generate on demand
-    try:
-        img, _ = service.generate(
-            width  or config.DEFAULT_WIDTH,
-            height or config.DEFAULT_HEIGHT,
-            style  or "random",
-            seed,
-        )
-    except ValueError as exc:
-        raise HTTPException(status_code=400, detail=str(exc))
-
-    buf = io.BytesIO()
-    img.save(buf, "PNG", compress_level=1)
-    return Response(
-        content=buf.getvalue(),
-        media_type="image/png",
-        headers={"X-RIaaS-Source": "live"},
-    )
 
 
 # ── Gradio UI ─────────────────────────────────────────────────────────────────
@@ -101,10 +57,46 @@ with gr.Blocks(title="RIaaS — Random Image as a Service") as demo:
         outputs=[output_image, output_info],
     )
 
-# Mount Gradio at root. Routes defined on `app` above (/image) are matched
-# before the wildcard Gradio mount, so both coexist without conflict.
-app = gr.mount_gradio_app(app, demo, path="/")
+
+# ── /image route on Gradio's own FastAPI app ──────────────────────────────────
+# demo.queue() initialises demo.app (Gradio's internal FastAPI instance).
+# Attaching routes here avoids the Starlette path-stripping bug that breaks
+# Gradio's /_app/immutable/* static assets when using mount_gradio_app("/").
+demo.queue()
+app = demo.app
+
+
+@app.get("/image")
+async def image_api(
+    width:  int | None = Query(None, ge=config.MIN_WIDTH,  le=config.MAX_WIDTH),
+    height: int | None = Query(None, ge=config.MIN_HEIGHT, le=config.MAX_HEIGHT),
+    style:  str | None = Query(None),
+    seed:   int | None = Query(None),
+):
+    if _pool and width is None and height is None and style is None and seed is None:
+        return Response(
+            content=random.choice(_pool),
+            media_type="image/png",
+            headers={"X-RIaaS-Source": "pool"},
+        )
+    try:
+        img, _ = service.generate(
+            width  or config.DEFAULT_WIDTH,
+            height or config.DEFAULT_HEIGHT,
+            style  or "random",
+            seed,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    buf = io.BytesIO()
+    img.save(buf, "PNG", compress_level=1)
+    return Response(
+        content=buf.getvalue(),
+        media_type="image/png",
+        headers={"X-RIaaS-Source": "live"},
+    )
+
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=7860)
+    demo.launch(server_port=7860)
