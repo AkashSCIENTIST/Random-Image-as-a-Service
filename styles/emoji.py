@@ -36,36 +36,20 @@ EMOJI_POOL = [
     "🚀", "✈️", "🛸", "🚁", "⛵", "🏎️"
 ]
 
+_BUNDLED_FONT = Path(__file__).parent.parent / "assets" / "NotoColorEmoji.ttf"
+
 _FONT_CANDIDATES = [
+    _BUNDLED_FONT,
     "C:/Windows/Fonts/seguiemj.ttf",
-    r"C:\Windows\Fonts\seguiemj.ttf",
     "/System/Library/Fonts/Apple Color Emoji.ttc",
-    "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
-    "/usr/share/fonts/noto/NotoColorEmoji.ttf",
-    "/usr/share/fonts/truetype/noto-color-emoji/NotoColorEmoji.ttf",
-    "/usr/share/fonts/google-noto-emoji/NotoColorEmoji.ttf",
-    "/usr/local/share/fonts/NotoColorEmoji.ttf",
 ]
 
 
-def _locate_emoji_font() -> list[str]:
-    """Ask fontconfig where the emoji font lives (Linux only)."""
-    try:
-        import subprocess
-        result = subprocess.run(
-            ["fc-list", ":family=Noto Color Emoji", "--format=%{file}\n"],
-            capture_output=True, text=True, timeout=3,
-        )
-        return [p.strip() for p in result.stdout.splitlines() if p.strip()]
-    except Exception:
-        return []
-
-
 def _load_emoji_font(size: int) -> ImageFont.FreeTypeFont | None:
-    for path in _locate_emoji_font() + _FONT_CANDIDATES:
+    for path in _FONT_CANDIDATES:
         if Path(path).exists():
             try:
-                return ImageFont.truetype(path, size)
+                return ImageFont.truetype(str(path), size)
             except Exception:
                 continue
     return None
