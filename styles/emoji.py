@@ -37,16 +37,24 @@ EMOJI_POOL = [
 ]
 
 _BUNDLED_FONT = Path(__file__).parent.parent / "assets" / "NotoColorEmoji.ttf"
+_FONT_URL = "https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf"
 
-_FONT_CANDIDATES = [
-    _BUNDLED_FONT,
+_SYSTEM_FONTS = [
     "C:/Windows/Fonts/seguiemj.ttf",
     "/System/Library/Fonts/Apple Color Emoji.ttc",
 ]
 
 
+def _ensure_font() -> None:
+    if not _BUNDLED_FONT.exists():
+        import urllib.request
+        _BUNDLED_FONT.parent.mkdir(exist_ok=True)
+        urllib.request.urlretrieve(_FONT_URL, str(_BUNDLED_FONT))
+
+
 def _load_emoji_font(size: int) -> ImageFont.FreeTypeFont | None:
-    for path in _FONT_CANDIDATES:
+    _ensure_font()
+    for path in [_BUNDLED_FONT] + _SYSTEM_FONTS:
         if Path(path).exists():
             try:
                 return ImageFont.truetype(str(path), size)
