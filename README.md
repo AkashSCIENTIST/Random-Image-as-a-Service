@@ -28,16 +28,19 @@ Every image below is served live from the API right now.
 
 <table>
   <tr>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=linear&v=30" width="100%"><br><sub>linear</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=geometric&v=30" width="100%"><br><sub>geometric</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=freeform&v=30" width="100%"><br><sub>freeform</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=gradient_ramp&v=30" width="100%"><br><sub>gradient ramp</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=linear&v=31" width="100%"><br><sub><code>linear</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=radial&v=31" width="100%"><br><sub><code>radial</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=multicolor&v=31" width="100%"><br><sub><code>multicolor</code></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=radial&v=30" width="100%"><br><sub>radial</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=multicolor&v=30" width="100%"><br><sub>multicolor</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=shape_blur&v=30" width="100%"><br><sub>shape blur</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji_hex&v=30" width="100%"><br><sub>emoji hex</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=freeform&v=31" width="100%"><br><sub><code>freeform</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=shape_blur&v=31" width="100%"><br><sub><code>shape_blur</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=gradient_ramp&v=31" width="100%"><br><sub><code>gradient_ramp</code></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=geometric&v=31" width="100%"><br><sub><code>geometric</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji&v=31" width="100%"><br><sub><code>emoji</code></sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji_hex&v=31" width="100%"><br><sub><code>emoji_hex</code></sub></td>
   </tr>
 </table>
 
