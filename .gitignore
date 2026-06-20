@@ -71,3 +71,6 @@ output/
 *.jpeg
 *.gif
 *.webp
+
+# Large font file — downloaded at first use
+assets/NotoColorEmoji.ttf
