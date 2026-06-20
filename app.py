@@ -29,6 +29,13 @@ threading.Thread(target=_build_pool, daemon=True).start()
 app = FastAPI(title="RIaaS — Random Image as a Service")
 
 
+_NO_CACHE = {
+    "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+    "Pragma": "no-cache",
+    "Expires": "0",
+}
+
+
 @app.get("/image")
 async def image_api(
     width:  int | None = Query(None, ge=config.MIN_WIDTH,  le=config.MAX_WIDTH),
@@ -40,7 +47,7 @@ async def image_api(
         return Response(
             content=random.choice(_pool),
             media_type="image/png",
-            headers={"X-RIaaS-Source": "pool"},
+            headers={**_NO_CACHE, "X-RIaaS-Source": "pool"},
         )
     try:
         img, _ = service.generate(
@@ -57,7 +64,7 @@ async def image_api(
     return Response(
         content=buf.getvalue(),
         media_type="image/png",
-        headers={"X-RIaaS-Source": "live"},
+        headers={**_NO_CACHE, "X-RIaaS-Source": "live"},
     )
 
 
