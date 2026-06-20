@@ -42,6 +42,12 @@ async def banner_svg():
         return Response(content=f.read(), media_type="image/svg+xml")
 
 
+@app.get("/new_banner.svg")
+async def new_banner_svg():
+    with open("new_banner.svg", "rb") as f:
+        return Response(content=f.read(), media_type="image/svg+xml")
+
+
 @app.get("/image")
 async def image_api(
     width:  int | None = Query(None, ge=config.MIN_WIDTH,  le=config.MAX_WIDTH),
@@ -87,7 +93,11 @@ def generate_image(width: int, height: int, style: str, seed: str) -> tuple[Imag
     return image, f"Style: {meta['style']} | Seed: {meta['seed']}"
 
 
-with gr.Blocks(title="RIaaS — Random Image as a Service") as demo:
+with gr.Blocks(
+    title="RIaaS — Random Image as a Service",
+    theme=gr.themes.Default(),
+    js="() => { document.body.classList.remove('dark'); }",
+) as demo:
     gr.Markdown("# Random Image as a Service\nGenerate beautiful gradient images on demand.")
     with gr.Row():
         with gr.Column(scale=1):
@@ -106,7 +116,7 @@ with gr.Blocks(title="RIaaS — Random Image as a Service") as demo:
             output_image = gr.Image(label="Result", type="pil")
             output_info  = gr.Textbox(label="Info", interactive=False)
 
-    gr.HTML('<img src="/banner.svg" alt="RIaaS banner" style="width:100%;margin-top:16px;border-radius:4px">')
+    gr.HTML('<img src="/new_banner.svg" alt="RIaaS banner" style="width:100%;margin-top:16px;border-radius:4px">')
 
     generate_btn.click(
         generate_image,
