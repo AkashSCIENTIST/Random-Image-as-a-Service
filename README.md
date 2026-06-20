@@ -10,6 +10,10 @@ pinned: false
 
 <img src="banner.svg" alt="Random Image as a Service" width="100%">
 
+**Built to replace boring grey placeholder images during UI mockups and development.**
+
+Every `<img src="...">` placeholder in a prototype or staging build deserves something better than a flat grey box. RIaaS serves a real, visually distinct gradient image for every request — no signup, no API key, one tag.
+
 Point an `<img>` tag at it and get a gradient. Different every time, or pinned with a seed.
 
 Nine styles: linear fades, radial blends, multi-stop color fields, freeform blobs, glassmorphism, banded ramps, low-poly geometry, and emoji — single or tiled in a hexagonal honeycomb.
