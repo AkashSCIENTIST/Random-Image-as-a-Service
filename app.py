@@ -90,6 +90,7 @@ with gr.Blocks(title="RIaaS — Random Image as a Service") as demo:
             style_dropdown = gr.Dropdown(STYLE_CHOICES, value="random", label="Style")
             seed_input     = gr.Textbox(value="", placeholder="Leave blank for random", label="Seed")
             generate_btn   = gr.Button("Generate", variant="primary")
+            gr.Markdown("Use [`/image`](https://aakkaasshh-random-image-as-a-service.hf.space/image) as a colorful placeholder in any `<img>` tag.")
         with gr.Column(scale=2):
             output_image = gr.Image(label="Result", type="pil")
             output_info  = gr.Textbox(label="Info", interactive=False)
