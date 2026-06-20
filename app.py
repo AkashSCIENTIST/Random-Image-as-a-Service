@@ -36,6 +36,12 @@ _NO_CACHE = {
 }
 
 
+@app.get("/banner.svg")
+async def banner_svg():
+    with open("banner.svg", "rb") as f:
+        return Response(content=f.read(), media_type="image/svg+xml")
+
+
 @app.get("/image")
 async def image_api(
     width:  int | None = Query(None, ge=config.MIN_WIDTH,  le=config.MAX_WIDTH),
@@ -96,10 +102,11 @@ with gr.Blocks(title="RIaaS — Random Image as a Service") as demo:
                 interactive=False,
                 show_copy_button=True,
             )
-            gr.Markdown("Use [`/image`](https://aakkaasshh-random-image-as-a-service.hf.space/image) as a colorful placeholder in any `<img>` tag.")
         with gr.Column(scale=2):
             output_image = gr.Image(label="Result", type="pil")
             output_info  = gr.Textbox(label="Info", interactive=False)
+
+    gr.HTML('<img src="/banner.svg" alt="RIaaS banner" style="width:100%;margin-top:16px;border-radius:4px">')
 
     generate_btn.click(
         generate_image,
