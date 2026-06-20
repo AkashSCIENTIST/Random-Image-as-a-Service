@@ -8,7 +8,7 @@ app_port: 7860
 pinned: false
 ---
 
-<img src="banner.svg" alt="Random Image as a Service" width="100%">
+<img src="banner.svg?v=2" alt="Random Image as a Service" width="100%">
 
 [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-lg-dark.svg)](https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service) &nbsp; [![GitHub](https://img.shields.io/badge/GitHub-AkashSCIENTIST%2FRandom--Image--as--a--Service-181717?style=for-the-badge&logo=github)](https://github.com/AkashSCIENTIST/Random-Image-as-a-Service)
 
