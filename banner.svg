@@ -1,18 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
   <defs>
-
-    <!-- Swatch gradients -->
     <linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FF3F3F"/>
       <stop offset="100%" stop-color="#3F3FFF"/>
     </linearGradient>
-
     <radialGradient id="gr" cx="50%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#FFE500"/>
       <stop offset="55%" stop-color="#FF3F3F"/>
       <stop offset="100%" stop-color="#2D0057"/>
     </radialGradient>
-
     <linearGradient id="gm" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"   stop-color="#FF3F3F"/>
       <stop offset="25%"  stop-color="#FF8C00"/>
@@ -20,30 +16,6 @@
       <stop offset="75%"  stop-color="#00FF94"/>
       <stop offset="100%" stop-color="#00C3FF"/>
     </linearGradient>
-
-    <linearGradient id="gd" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#0d001f"/>
-      <stop offset="50%"  stop-color="#5c0070"/>
-      <stop offset="100%" stop-color="#ff6ec7"/>
-    </linearGradient>
-
-    <radialGradient id="gme1" cx="25%" cy="25%" r="70%">
-      <stop offset="0%"   stop-color="#00C3FF" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#00C3FF" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="gme2" cx="75%" cy="75%" r="65%">
-      <stop offset="0%"   stop-color="#BF5FFF" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#BF5FFF" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="gme3" cx="75%" cy="25%" r="55%">
-      <stop offset="0%"   stop-color="#00FF94" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#00FF94" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="gme4" cx="28%" cy="78%" r="52%">
-      <stop offset="0%"   stop-color="#FF6B35" stop-opacity="0.80"/>
-      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
-    </radialGradient>
-
     <radialGradient id="gf1" cx="18%" cy="65%" r="75%">
       <stop offset="0%"   stop-color="#FF3F3F" stop-opacity="1"/>
       <stop offset="100%" stop-color="#FF3F3F" stop-opacity="0"/>
@@ -60,12 +32,10 @@
       <stop offset="0%"   stop-color="#00FF94" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#00FF94" stop-opacity="0"/>
     </radialGradient>
-
     <linearGradient id="gsb" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%"   stop-color="#0d1424"/>
       <stop offset="100%" stop-color="#1a0d24"/>
     </linearGradient>
-
     <linearGradient id="gramp" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"      stop-color="#FF3F3F"/>
       <stop offset="16.65%"  stop-color="#FF3F3F"/>
@@ -80,230 +50,270 @@
       <stop offset="83.31%"  stop-color="#BF5FFF"/>
       <stop offset="100%"    stop-color="#BF5FFF"/>
     </linearGradient>
-
-    <!-- Dot texture pattern -->
     <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
       <circle cx="11" cy="11" r="1.4" fill="#2a2a2a"/>
     </pattern>
-
-    <!-- Clip paths for swatches with overflow content -->
+    <clipPath id="cs4"><rect x="796" y="166" width="182" height="134"/></clipPath>
     <clipPath id="cs6"><rect x="606" y="308" width="182" height="134"/></clipPath>
     <clipPath id="cs8"><rect x="986" y="308" width="182" height="134"/></clipPath>
-
-    <!-- Blur filter for shape_blur swatch -->
     <filter id="bf" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="9"/>
     </filter>
-
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="480" fill="#0C0C0C"/>
-
-  <!-- Dot texture — left half only -->
   <rect x="0" y="0" width="598" height="480" fill="url(#dots)"/>
-
-  <!-- Outer border -->
   <rect x="5" y="5" width="1190" height="470" fill="none" stroke="#FFE500" stroke-width="6"/>
-
-  <!-- Vertical divider -->
   <rect x="594" y="5" width="5" height="470" fill="#FFE500"/>
 
-  <!-- ─────────────────────────────────────────────────── -->
-  <!-- LEFT: TYPOGRAPHY                                    -->
-  <!-- ─────────────────────────────────────────────────── -->
-
-  <!-- "RANDOM" — ghost shadow -->
-  <text x="45" y="183"
-    font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif"
-    font-size="108" font-weight="900" letter-spacing="-3"
-    fill="#FFE500" opacity="0.12">RANDOM</text>
-  <!-- "RANDOM" — main -->
-  <text x="40" y="179"
-    font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif"
-    font-size="108" font-weight="900" letter-spacing="-3"
-    fill="#FFFFFF">RANDOM</text>
-
-  <!-- "IMAGE" — ghost shadow -->
-  <text x="45" y="300"
-    font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif"
-    font-size="108" font-weight="900" letter-spacing="-3"
-    fill="#FF6B35" opacity="0.45">IMAGE</text>
-  <!-- "IMAGE" — main -->
-  <text x="40" y="296"
-    font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif"
-    font-size="108" font-weight="900" letter-spacing="-3"
-    fill="#FFE500">IMAGE</text>
-
-  <!-- Yellow underline -->
+  <text x="45" y="183" font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#FFE500" opacity="0.12">RANDOM</text>
+  <text x="40" y="179" font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#FFFFFF">RANDOM</text>
+  <text x="45" y="300" font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#FF6B35" opacity="0.45">IMAGE</text>
+  <text x="40" y="296" font-family="'Arial Black','Impact','Haettenschweiler',Arial,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#FFE500">IMAGE</text>
   <rect x="40" y="309" width="498" height="7" fill="#FFE500"/>
+  <text x="40" y="362" font-family="'Arial Black',Arial,sans-serif" font-size="34" font-weight="900" letter-spacing="6" fill="#FFFFFF">AS A SERVICE</text>
+  <text x="40" y="400" font-family="'Courier New',Courier,monospace" font-size="13" fill="#4a4a4a" letter-spacing="0.2">point an &lt;img src="..."&gt; at it. get a gradient. that&#39;s it.</text>
 
-  <!-- "AS A SERVICE" -->
-  <text x="40" y="362"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="34" font-weight="900" letter-spacing="6"
-    fill="#FFFFFF">AS A SERVICE</text>
-
-  <!-- Tagline -->
-  <text x="40" y="400"
-    font-family="'Courier New',Courier,monospace"
-    font-size="13" fill="#4a4a4a" letter-spacing="0.2">point an &lt;img src="..."&gt; at it. get a gradient. that's it.</text>
-
-  <!-- ── Badges ── -->
-
-  <!-- RIaaS — neo-brutal (solid shadow + border) -->
   <rect x="44" y="427" width="76" height="30" fill="#FFE500"/>
   <rect x="40" y="423" width="76" height="30" fill="#0C0C0C" stroke="#FFE500" stroke-width="2.5"/>
-  <text x="78" y="443" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="13" font-weight="900" fill="#FFE500" letter-spacing="1">RIaaS</text>
-
-  <!-- GET /image -->
+  <text x="78" y="443" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="13" font-weight="900" fill="#FFE500" letter-spacing="1">RIaaS</text>
   <rect x="130" y="423" width="130" height="30" fill="#111111" stroke="#2a2a2a" stroke-width="1.5"/>
-  <text x="145" y="443"
-    font-family="'Courier New',monospace"
-    font-size="13" fill="#444444">GET </text>
-  <text x="180" y="443"
-    font-family="'Courier New',monospace"
-    font-size="13" fill="#FFE500">/image</text>
-
-  <!-- 9 STYLES -->
+  <text x="145" y="443" font-family="'Courier New',monospace" font-size="13" fill="#444444">GET </text>
+  <text x="180" y="443" font-family="'Courier New',monospace" font-size="13" fill="#FFE500">/image</text>
   <rect x="274" y="423" width="110" height="30" fill="#111111" stroke="#2a2a2a" stroke-width="1.5"/>
-  <text x="329" y="443" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#555555" letter-spacing="2.5">9 STYLES</text>
+  <text x="329" y="443" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#555555" letter-spacing="2.5">9 STYLES</text>
 
-  <!-- ── Decorative scatter ── -->
-  <text x="526" y="88"  font-size="30" fill="#FFE500" opacity="0.45" font-family="Arial">✦</text>
-  <text x="552" y="194" font-size="17" fill="#444444"              font-family="Arial">✦</text>
-  <text x="532" y="316" font-size="23" fill="#FFE500" opacity="0.30" font-family="Arial">✦</text>
-  <text x="507" y="390" font-size="12" fill="#333333"              font-family="Arial">✦</text>
+  <text x="526" y="88"  font-size="30" fill="#FFE500" opacity="0.45" font-family="Arial">&#10022;</text>
+  <text x="552" y="194" font-size="17" fill="#444444"              font-family="Arial">&#10022;</text>
+  <text x="532" y="316" font-size="23" fill="#FFE500" opacity="0.30" font-family="Arial">&#10022;</text>
+  <text x="507" y="390" font-size="12" fill="#333333"              font-family="Arial">&#10022;</text>
   <text x="488" y="152" font-size="14" fill="#2d2d2d" font-weight="bold" font-family="Arial">+</text>
   <text x="560" y="268" font-size="14" fill="#2d2d2d" font-weight="bold" font-family="Arial">+</text>
   <text x="476" y="430" font-size="14" fill="#2d2d2d" font-weight="bold" font-family="Arial">+</text>
 
-  <!-- ─────────────────────────────────────────────────── -->
-  <!-- RIGHT: 3×3 SWATCH GRID                             -->
-  <!-- col x: 606 / 796 / 986   gap 8px   cell 182×134   -->
-  <!-- row y:  24 / 166 / 308   gap 8px                   -->
-  <!-- ─────────────────────────────────────────────────── -->
-
-  <!-- ── S0 LINEAR ── -->
+  <!-- S0 LINEAR -->
   <rect x="609" y="27"  width="182" height="134" fill="#FF3F3F" opacity="0.50"/>
   <rect x="606" y="24"  width="182" height="134" fill="url(#gl)"/>
   <rect x="606" y="24"  width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="606" y="129" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="697" y="148" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">LINEAR</text>
+  <text x="697" y="148" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">LINEAR</text>
 
-  <!-- ── S1 RADIAL ── -->
+  <!-- S1 RADIAL -->
   <rect x="799" y="27"  width="182" height="134" fill="#FFE500" opacity="0.40"/>
   <rect x="796" y="24"  width="182" height="134" fill="url(#gr)"/>
   <rect x="796" y="24"  width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="796" y="129" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="887" y="148" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">RADIAL</text>
+  <text x="887" y="148" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">RADIAL</text>
 
-  <!-- ── S2 MULTICOLOR ── -->
+  <!-- S2 MULTICOLOR -->
   <rect x="989" y="27"  width="182" height="134" fill="#00FF94" opacity="0.35"/>
   <rect x="986" y="24"  width="182" height="134" fill="url(#gm)"/>
   <rect x="986" y="24"  width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="986" y="129" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="1077" y="148" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">MULTICOLOR</text>
+  <text x="1077" y="148" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">MULTICOLOR</text>
 
-  <!-- ── S3 DUOTONE ── -->
-  <rect x="609" y="169" width="182" height="134" fill="#BF5FFF" opacity="0.45"/>
-  <rect x="606" y="166" width="182" height="134" fill="url(#gd)"/>
+  <!-- S3 FREEFORM -->
+  <rect x="606" y="166" width="182" height="134" fill="#08080f"/>
+  <rect x="606" y="166" width="182" height="134" fill="url(#gf1)"/>
+  <rect x="606" y="166" width="182" height="134" fill="url(#gf2)"/>
+  <rect x="606" y="166" width="182" height="134" fill="url(#gf3)"/>
+  <rect x="606" y="166" width="182" height="134" fill="url(#gf4)"/>
   <rect x="606" y="166" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="606" y="271" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="697" y="290" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">DUOTONE</text>
+  <text x="697" y="290" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">FREEFORM</text>
 
-  <!-- ── S4 MESH ── -->
-  <rect x="799" y="169" width="182" height="134" fill="#00C3FF" opacity="0.35"/>
-  <rect x="796" y="166" width="182" height="134" fill="#080f1a"/>
-  <rect x="796" y="166" width="182" height="134" fill="url(#gme1)"/>
-  <rect x="796" y="166" width="182" height="134" fill="url(#gme2)"/>
-  <rect x="796" y="166" width="182" height="134" fill="url(#gme3)"/>
-  <rect x="796" y="166" width="182" height="134" fill="url(#gme4)"/>
+  <!-- S4 SHAPE BLUR -->
+  <g clip-path="url(#cs4)">
+    <rect x="796" y="166" width="182" height="134" fill="url(#gsb)"/>
+    <g filter="url(#bf)">
+      <ellipse cx="858" cy="230" rx="60" ry="46" fill="#FF6B35" fill-opacity="0.90"/>
+      <ellipse cx="936" cy="248" rx="52" ry="40" fill="#00C3FF" fill-opacity="0.85"/>
+      <ellipse cx="912" cy="196" rx="44" ry="34" fill="#BF5FFF" fill-opacity="0.80"/>
+      <ellipse cx="826" cy="186" rx="36" ry="28" fill="#FFE500" fill-opacity="0.65"/>
+    </g>
+  </g>
   <rect x="796" y="166" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="796" y="271" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="887" y="290" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">MESH</text>
+  <text x="887" y="290" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">SHAPE BLUR</text>
 
-  <!-- ── S5 FREEFORM ── -->
-  <rect x="989" y="169" width="182" height="134" fill="#FF3F3F" opacity="0.35"/>
-  <rect x="986" y="166" width="182" height="134" fill="#08080f"/>
-  <rect x="986" y="166" width="182" height="134" fill="url(#gf1)"/>
-  <rect x="986" y="166" width="182" height="134" fill="url(#gf2)"/>
-  <rect x="986" y="166" width="182" height="134" fill="url(#gf3)"/>
-  <rect x="986" y="166" width="182" height="134" fill="url(#gf4)"/>
+  <!-- S5 GRADIENT RAMP -->
+  <rect x="986" y="166" width="182" height="134" fill="url(#gramp)"/>
   <rect x="986" y="166" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="986" y="271" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="1077" y="290" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">FREEFORM</text>
+  <text x="1077" y="290" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">GRADIENT RAMP</text>
 
-  <!-- ── S6 SHAPE BLUR ── -->
-  <rect x="609" y="311" width="182" height="134" fill="#FF6B35" opacity="0.45"/>
+  <!-- S6 GEOMETRIC -->
   <g clip-path="url(#cs6)">
-    <rect x="606" y="308" width="182" height="134" fill="url(#gsb)"/>
-    <g filter="url(#bf)">
-      <ellipse cx="668" cy="372" rx="60" ry="46" fill="#FF6B35" fill-opacity="0.90"/>
-      <ellipse cx="746" cy="390" rx="52" ry="40" fill="#00C3FF" fill-opacity="0.85"/>
-      <ellipse cx="722" cy="338" rx="44" ry="34" fill="#BF5FFF" fill-opacity="0.80"/>
-      <ellipse cx="636" cy="328" rx="36" ry="28" fill="#FFE500" fill-opacity="0.65"/>
-    </g>
+    <rect x="606" y="308" width="182" height="134" fill="#10001e"/>
+    <polygon points="606,308 667,308 637,375" fill="#BF5FFF"/>
+    <polygon points="667,308 728,308 697,375" fill="#FF3F3F"/>
+    <polygon points="728,308 788,308 758,375" fill="#FF6B35"/>
+    <polygon points="606,308 637,375 606,375"  fill="#FF3F3F"/>
+    <polygon points="667,308 697,375 637,375" fill="#FFE500"/>
+    <polygon points="728,308 758,375 697,375" fill="#00FF94"/>
+    <polygon points="788,308 788,375 758,375" fill="#00C3FF"/>
+    <polygon points="606,375 667,442 606,442"  fill="#00C3FF"/>
+    <polygon points="606,375 667,375 667,442" fill="#FF6B35"/>
+    <polygon points="667,375 728,442 667,442" fill="#BF5FFF"/>
+    <polygon points="697,375 697,442 728,442" fill="#FF3F3F"/>
+    <polygon points="758,375 788,375 788,442" fill="#FFE500"/>
+    <polygon points="637,375 697,375 667,442" fill="#00FF94"/>
+    <polygon points="697,375 758,375 728,442" fill="#00C3FF"/>
+    <polygon points="758,375 788,442 728,442" fill="#FF3F3F"/>
   </g>
   <rect x="606" y="308" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="606" y="413" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="697" y="432" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">SHAPE BLUR</text>
+  <text x="697" y="432" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">GEOMETRIC</text>
 
-  <!-- ── S7 GRADIENT RAMP ── -->
-  <rect x="799" y="311" width="182" height="134" fill="#FFE500" opacity="0.35"/>
-  <rect x="796" y="308" width="182" height="134" fill="url(#gramp)"/>
+  <!-- S7 EMOJI -->
+  <rect x="796" y="308" width="182" height="134" fill="#fef8e8"/>
+  <ellipse cx="887" cy="400" rx="46" ry="14" fill="#00000033"/>
+  <circle cx="887" cy="367" r="44" fill="#FF9B3A"/>
+  <circle cx="872" cy="358" r="6" fill="#1a1a1a"/>
+  <circle cx="902" cy="358" r="6" fill="#1a1a1a"/>
+  <circle cx="875" cy="355" r="2" fill="#ffffff88"/>
+  <circle cx="905" cy="355" r="2" fill="#ffffff88"/>
+  <path d="M 868 378 Q 887 396 906 378" stroke="#1a1a1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
   <rect x="796" y="308" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="796" y="413" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="887" y="432" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">RAMP</text>
+  <text x="887" y="432" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">EMOJI</text>
 
-  <!-- ── S8 GEOMETRIC ── -->
-  <rect x="989" y="311" width="182" height="134" fill="#00FF94" opacity="0.30"/>
+  <!-- S8 EMOJI HEX -->
   <g clip-path="url(#cs8)">
-    <rect x="986" y="308" width="182" height="134" fill="#10001e"/>
-    <!-- row 0 upward triangles -->
-    <polygon points="986,308  1047,308  1017,375" fill="#BF5FFF"/>
-    <polygon points="1047,308 1108,308  1077,375" fill="#FF3F3F"/>
-    <polygon points="1108,308 1168,308  1138,375" fill="#FF6B35"/>
-    <!-- row 0 downward triangles -->
-    <polygon points="986,308  1017,375  986,375"  fill="#FF3F3F"/>
-    <polygon points="1047,308 1077,375  1017,375" fill="#FFE500"/>
-    <polygon points="1108,308 1138,375  1077,375" fill="#00FF94"/>
-    <polygon points="1168,308 1168,375  1138,375" fill="#00C3FF"/>
-    <!-- row 1 upward triangles -->
-    <polygon points="986,375  1047,442  986,442"  fill="#00C3FF"/>
-    <polygon points="986,375  1047,375  1047,442" fill="#FF6B35"/>
-    <polygon points="1047,375 1108,442  1047,442" fill="#BF5FFF"/>
-    <polygon points="1077,375 1077,442  1108,442" fill="#FF3F3F"/>
-    <polygon points="1138,375 1168,375  1168,442" fill="#FFE500"/>
-    <!-- row 1 downward triangles -->
-    <polygon points="1017,375 1077,375  1047,442" fill="#00FF94"/>
-    <polygon points="1077,375 1138,375  1108,442" fill="#00C3FF"/>
-    <polygon points="1138,375 1168,442  1108,442" fill="#FF3F3F"/>
+    <rect x="986" y="308" width="182" height="134" fill="#0f0f1a"/>
+  <circle cx="986" cy="314" r="5" fill="#FF6B35"/>
+  <circle cx="986" cy="339" r="5" fill="#FF6B35"/>
+  <circle cx="986" cy="363" r="5" fill="#FF6B35"/>
+  <circle cx="986" cy="387" r="5" fill="#FF6B35"/>
+  <circle cx="986" cy="411" r="5" fill="#FF6B35"/>
+  <circle cx="986" cy="436" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="302" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="327" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="351" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="375" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="399" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="423" r="5" fill="#FF6B35"/>
+  <circle cx="1007" cy="448" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="314" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="339" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="363" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="387" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="411" r="5" fill="#FF6B35"/>
+  <circle cx="1028" cy="436" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="302" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="327" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="351" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="375" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="399" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="423" r="5" fill="#FF6B35"/>
+  <circle cx="1049" cy="448" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="314" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="339" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="363" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="387" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="411" r="5" fill="#FF6B35"/>
+  <circle cx="1070" cy="436" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="302" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="327" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="351" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="375" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="399" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="423" r="5" fill="#FF6B35"/>
+  <circle cx="1091" cy="448" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="314" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="339" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="363" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="387" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="411" r="5" fill="#FF6B35"/>
+  <circle cx="1112" cy="436" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="302" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="327" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="351" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="375" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="399" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="423" r="5" fill="#FF6B35"/>
+  <circle cx="1133" cy="448" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="314" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="339" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="363" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="387" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="411" r="5" fill="#FF6B35"/>
+  <circle cx="1154" cy="436" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="302" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="327" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="351" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="375" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="399" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="423" r="5" fill="#FF6B35"/>
+  <circle cx="1175" cy="448" r="5" fill="#FF6B35"/>
+  <circle cx="979" cy="302" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="327" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="351" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="375" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="399" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="423" r="5" fill="#00C3FF"/>
+  <circle cx="979" cy="448" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="314" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="339" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="363" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="387" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="411" r="5" fill="#00C3FF"/>
+  <circle cx="1000" cy="436" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="302" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="327" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="351" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="375" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="399" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="423" r="5" fill="#00C3FF"/>
+  <circle cx="1021" cy="448" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="314" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="339" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="363" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="387" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="411" r="5" fill="#00C3FF"/>
+  <circle cx="1042" cy="436" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="302" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="327" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="351" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="375" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="399" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="423" r="5" fill="#00C3FF"/>
+  <circle cx="1063" cy="448" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="314" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="339" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="363" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="387" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="411" r="5" fill="#00C3FF"/>
+  <circle cx="1084" cy="436" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="302" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="327" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="351" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="375" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="399" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="423" r="5" fill="#00C3FF"/>
+  <circle cx="1105" cy="448" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="314" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="339" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="363" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="387" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="411" r="5" fill="#00C3FF"/>
+  <circle cx="1126" cy="436" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="302" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="327" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="351" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="375" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="399" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="423" r="5" fill="#00C3FF"/>
+  <circle cx="1147" cy="448" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="314" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="339" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="363" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="387" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="411" r="5" fill="#00C3FF"/>
+  <circle cx="1168" cy="436" r="5" fill="#00C3FF"/>
   </g>
   <rect x="986" y="308" width="182" height="134" fill="none" stroke="#000000" stroke-width="3"/>
   <rect x="986" y="413" width="182" height="29"  fill="#000000" opacity="0.82"/>
-  <text x="1077" y="432" text-anchor="middle"
-    font-family="'Arial Black',Arial,sans-serif"
-    font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">GEOMETRIC</text>
+  <text x="1077" y="432" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="2.5">EMOJI HEX</text>
 
 </svg>
