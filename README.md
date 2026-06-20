@@ -29,19 +29,15 @@ Every image below is served live from the API right now.
 <table>
   <tr>
     <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=linear&seed=11" width="100%"><br><sub>linear</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=radial&seed=22" width="100%"><br><sub>radial</sub></td>
-  </tr>
-  <tr>
     <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=geometric&seed=33" width="100%"><br><sub>geometric</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=multicolor&seed=44" width="100%"><br><sub>multicolor</sub></td>
-  </tr>
-  <tr>
     <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=freeform&seed=55" width="100%"><br><sub>freeform</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=shape_blur&seed=66" width="100%"><br><sub>shape blur</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=gradient_ramp&seed=77" width="100%"><br><sub>gradient ramp</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=gradient_ramp&seed=77" width="100%"><br><sub>gradient ramp</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji_hex&seed=88" width="100%"><br><sub>emoji hex</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=radial&seed=22" width="100%"><br><sub>radial</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=multicolor&seed=44" width="100%"><br><sub>multicolor</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=shape_blur&seed=66" width="100%"><br><sub>shape blur</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji_hex&seed=42" width="100%"><br><sub>emoji hex</sub></td>
   </tr>
 </table>
 
