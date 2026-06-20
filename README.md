@@ -28,16 +28,16 @@ Every image below is served live from the API right now.
 
 <table>
   <tr>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=linear&seed=11" width="100%"><br><sub>linear</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=geometric&seed=33" width="100%"><br><sub>geometric</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=freeform&seed=55" width="100%"><br><sub>freeform</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=gradient_ramp&seed=77" width="100%"><br><sub>gradient ramp</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=900&height=500&style=linear&seed=11" width="100%"><br><sub>linear · 9∶5</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=500&height=800&style=geometric&seed=33" width="100%"><br><sub>geometric · 5∶8</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=800&height=500&style=freeform&seed=55" width="100%"><br><sub>freeform · 8∶5</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=1024&height=576&style=gradient_ramp&seed=77" width="100%"><br><sub>gradient ramp · 16∶9</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=radial&seed=22" width="100%"><br><sub>radial</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=multicolor&seed=44" width="100%"><br><sub>multicolor</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=shape_blur&seed=66" width="100%"><br><sub>shape blur</sub></td>
-    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=768&height=768&style=emoji_hex&seed=42" width="100%"><br><sub>emoji hex</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=600&height=900&style=radial&seed=22" width="100%"><br><sub>radial · 2∶3</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=1200&height=630&style=multicolor&seed=44" width="100%"><br><sub>multicolor · OG image</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=600&height=900&style=shape_blur&seed=66" width="100%"><br><sub>shape blur · 2∶3</sub></td>
+    <td align="center"><img src="https://aakkaasshh-random-image-as-a-service.hf.space/image?width=500&height=900&style=emoji_hex&seed=42" width="100%"><br><sub>emoji hex · 5∶9</sub></td>
   </tr>
 </table>
 
