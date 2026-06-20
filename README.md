@@ -10,6 +10,8 @@ pinned: false
 
 <img src="banner.svg" alt="Random Image as a Service" width="100%">
 
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-lg-dark.svg)](https://huggingface.co/spaces/aakkaasshh/Random-Image-as-a-Service) &nbsp; [![GitHub](https://img.shields.io/badge/GitHub-AkashSCIENTIST%2FRandom--Image--as--a--Service-181717?style=for-the-badge&logo=github)](https://github.com/AkashSCIENTIST/Random-Image-as-a-Service)
+
 **Built to replace boring grey placeholder images during UI mockups and development.**
 
 Every `<img src="...">` placeholder in a prototype or staging build deserves something better than a flat grey box. RIaaS serves a real, visually distinct gradient image for every request — no signup, no API key, one tag.
